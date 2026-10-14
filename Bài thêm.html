@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<bode>
+    <form>
+        <<table cellpadding="4">
+            <tr>
+                <th colspan="2">
+                    <h2>Registration Form</h2>
+                </th>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <input type="text" name="firstname" size="35" required> (*)
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <input type="text" name="lastname" size="35" required> (*)
+                </td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td>
+                    <input type="email" name="email" size="35" required> (*)
+                </td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" name="password" size="35" required> (*)
+                </td>
+            </tr>
+            <tr>
+                <td>Gender :</td>
+                <td>
+                    <input type="radio" name="gender" value="male" id="male"> <label for="male">Male</label>
+                    <input type="radio" name="gender" value="female" id="female"> <label for="female">Female</label>
+                    <input type="radio" name="gender" value="other" id="other"> <label for="other">Other</label> 
+                </td>
+            </tr>
+            <tr>
+                <td>Age :</td>
+                <td>
+                    <input type="number" name="age" style="width: 70px;" > 
+                </td>
+            </tr>
+            <tr>
+                <td>Preferences:</td>
+                <td>
+                    
+                        <input type="checkbox" name="preferences" value="Acrylic painting"> Acrylic Painting<br>
+                        <input type="checkbox" name="preferences" value="Water color painting"> Watercolor<br>
+                        <input type="checkbox" name="preferences" value="Oil painting"> Oil Painting<br>
+                       
+                </td>
+            </tr>
+            <tr>
+                <td>Select Occupation:</td>
+                <td>
+                    <select name="occupation">
+                        <option value="student">Student</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="engineer">Engineer</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Bio:</td>
+                <td>
+                    <textarea name="bio" rows="4" cols="35"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" name="submit" value="Submit"></td>
+                <td><input type="reset" name="reset" value="Reset"></td>
+            </tr>
+        </table>
+    </form>
+</body>

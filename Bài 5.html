@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thông tin thành viên</title>
+</head>
+<body>
+    <form>
+        <table cellpadding="4">
+            <tr>
+                <th colspan="2">
+                    <h2>PHIẾU ĐĂNG KÝ</h2>
+                </th>
+            </tr>
+            <tr>
+                <td>Họ và tên:</td>
+                <td>
+                    <input type="text" name="fullname" size="35" required> (*)
+                </td>
+            </tr>
+            <tr>
+                <td>Địa chỉ :</td>
+                <td>
+                    <input type="text" name="address" size="45">
+                </td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td>
+                    <input type="email" name="email" size="35" required> (*)
+                </td>
+            </tr>
+            <tr>
+                <td>Giới tính :</td>
+                <td>
+                    <input type="radio" name="gender" value="nam" id="male"> <label for="male">Nam</label>
+                    <input type="radio" name="gender" value="nu" id="female"> <label for="female">Nữ</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Tuổi :</td>
+                <td>
+                    <input type="number" name="age" style="width: 70px;" required> (*)
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">Sở thích :</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="thethao"> Thể thao<br>
+                    <input type="checkbox" name="hobby" value="vanhoc"> Văn học<br>
+                    <input type="checkbox" name="hobby" value="cntt"> Công nghệ thông tin<br>
+                    <input type="checkbox" name="hobby" value="lichsu"> Lịch sử<br>
+                    <input type="checkbox" name="hobby" value="game"> Game
+                </td>
+            </tr>
+            <tr>
+                <td>Chuyên ngành:</td>
+                <td>
+                    <select name="major">
+                        <option value="web">Công nghệ Web</option>
+                        <option value="pm">Kỹ thuật phần mềm</option>
+                        <option value="mang">Mạng máy tính</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Gởi hình:</td>
+                <td>
+                    <input type="file" name="avatar">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">Yêu cầu:</td>
+                <td>
+                    <textarea name="request" rows="5" cols="35"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Gởi thông tin">
+                    <input type="reset" value="Nhập lại">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
