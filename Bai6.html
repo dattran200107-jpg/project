@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò chơi oẳn tù tì</title>
+</head>
+<body>
+    <h2>Trò chơi oẳn tù tì</h2>
+    <label>Bạn ra gì? (Kéo, Búa, Bao):</label>
+    <input type="text" id="tay" placeholder="Nhập Kéo, Búa hoặc Bao">
+    <br><br>
+    <button onclick="game()">Kéo, búa, bao</button>
+    <p id="ketqua"></p>
+    <script>
+        function game() {
+            // Lấy giá trị, bỏ khoảng trắng thừa và chuyển về chữ thường để so sánh dễ dàng
+            let tay = document.getElementById('tay').value.trim().toLowerCase();
+            
+            // Kiểm tra nếu người dùng chưa nhập hoặc nhập sai
+            if (tay !== "kéo" && tay !== "búa" && tay !== "bao") {
+                document.getElementById('ketqua').innerHTML = 
+                    '<span style="color: red;">Vui lòng nhập đúng: "Kéo", "Búa" hoặc "Bao"!</span>';
+                return;
+            }
+            // Máy chọn ngẫu nhiên
+            let soMayMan = Math.floor(Math.random() * 3) + 1;
+            let mayRa = "";
+            if (soMayMan === 1) {
+                mayRa = "kéo";
+            } else if (soMayMan === 2) {
+                mayRa = "búa";
+            } else {
+                mayRa = "bao";
+            }
+            // So sánh kết quả
+            let thongBao = "";
+            if (tay === mayRa) {
+                thongBao = "Kết quả: <b>Hòa!</b>";
+            } else if (
+                (tay === "kéo" && mayRa === "bao") ||
+                (tay === "búa" && mayRa === "kéo") ||
+                (tay === "bao" && mayRa === "búa")
+            ) {
+                thongBao = "Kết quả: <b style='color: green;'>Bạn Thắng! 🎉</b>";
+            } else {
+                thongBao = "Kết quả: <b style='color: red;'>Bạn Thua! 😢</b>";
+            }
+            // Hiển thị kết quả ra màn hình (viết hoa chữ cái đầu cho đẹp mắt)
+            let tayHienThi = tay.charAt(0).toUpperCase() + tay.slice(1);
+            let mayHienThi = mayRa.charAt(0).toUpperCase() + mayRa.slice(1);
+            document.getElementById('ketqua').innerHTML = 
+                'Bạn ra: <b>' + tayHienThi + '</b><br>' +
+                'Máy ra: <b>' + mayHienThi + '</b><br><br>' +
+                thongBao;
+        }
+    </script>
+</body>
+</html>

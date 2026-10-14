@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Dự đoán nghề nghiệp</h2>
+    <button onclick="duDoanNgheNghiep()">Dự đoán nghề nghiệp</button>
+    <p id="ketqua">Kết quả: -</p>
+
+    <script>
+        function duDoanNgheNghiep() {
+            // Mảng các nghề nghiệp
+            const ngheNghiep = [
+                "Kỹ sư phần mềm",
+                "Bác sĩ",
+                "Giáo viên",
+                "Nhà thiết kế đồ họa",
+                "Nhà văn",
+                "Nhà khoa học",
+                "Doanh nhân",
+                "Nghệ sĩ",
+                "Nhà báo",
+                "Nhà quản lý"
+            ];
+            
+            // Sinh số nguyên ngẫu nhiên từ 0 đến chiều dài mảng - 1
+            let index = Math.floor(Math.random() * ngheNghiep.length);
+            
+            // Hiển thị kết quả
+            document.getElementById('ketqua').innerHTML = `Kết quả: <b>${ngheNghiep[index]}</b>`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Kiểm tra mật khẩu</h2>
+    <label for="">Nhập mật khẩu</label>
+    <input type="password" id="matkhau">
+    <br><br>
+    <button onclick="kiemtra()">Kiểm tra</button>
+    <p id="ketqua"></p>
+    
+    <script>
+        function kiemtra() {
+            let matkhau = document.getElementById('matkhau').value;
+            if (matkhau.length < 8) {
+                document.getElementById('ketqua').innerHTML = 'Mật khẩu yếu';
+            } else if (matkhau.length < 12) {
+                document.getElementById('ketqua').innerHTML = 'Mật khẩu trung bình';
+            } else {
+                document.getElementById('ketqua').innerHTML = 'Mật khẩu mạnh';
+            }
+        }
+    </script>
+</body>
+</html>

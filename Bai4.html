@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>❤️Xem bói tình yêu</h2>
+    <label for="">Nhập tên bạn</label>
+    <input type="text" id="tenban">
+    <br><br>
+    <label for="">Nhập tên người ấy</label>
+    <input type="text" id="tennguoiay">
+    <br><br>
+    <button onclick="xemboi()">xem ket qua</button>
+    <h3 id="ketqua"></h3>
+
+    <script>
+        function xemboi(){
+        let tenBan = document.getElementById('tenban').value;
+        let tenNguoiAy = document.getElementById('tennguoiay').value;
+        let diem = Math.floor(Math.random() *100) +1;
+        if(diem > 50){
+            document.getElementById('ketqua').innerHTML =
+            tenBan +  tenNguoiAy +'.Điểm: ' + diem +'. Hai bạn hợp nhau đó';
+        } else {
+            document.getElementById('ketqua').innerHTML =
+            tenBan + '.💖' + tenNguoiAy + '.Điểm: ' + diem +'. Chia tay di';
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chương trình kiểm tra số chẵn số lẻ</h2>
+    <label for="">Nhập số</label>
+    <input type='number' id='so'>
+    <br><br>
+    <button onclick="chanle()">Kiểm tra</button>
+    <p id="ketqua"></p>
+    
+    <script>
+        function chanle() {
+            let so = document.getElementById('so').value;
+            if (so % 2 === 0) {
+                document.getElementById('ketqua').innerHTML = so + " là số chẵn";
+            } else {
+                document.getElementById('ketqua').innerHTML = so + " là số lẻ";
+            }
+        }
+    </script>
+</body>
+</html>

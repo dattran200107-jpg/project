@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Xúc xắc may mắn</title>
+</head>
+<body>
+    <h2>Trò chơi Lắc Xúc Xắc</h2>
+    <button onclick="lacXucXac()">Lắc xúc xắc</button>
+    <p id="ketqua">Kết quả: -</p>
+    <script>
+        function lacXucXac() {
+            // Sinh số nguyên ngẫu nhiên từ 1 đến 6
+            let soNut = Math.floor(Math.random() * 6) + 1;
+            
+            // Hiển thị kết quả
+            document.getElementById('ketqua').innerHTML = `Kết quả: <b>${soNut}</b> điểm!`;
+        }
+    </script>
+</body>
+</html>

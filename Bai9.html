@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Quay thưởng may mắn</h2>
+    <button onclick="quayThuong()">Quay thưởng</button>
+    <p id="ketqua">Kết quả: -</p>
+
+    <script>
+        function quayThuong() {
+            // Mảng các phần thưởng
+            const phanThuong = [
+                "Xe máy",
+                "Điện thoại",
+                "Laptop",
+                "Voucher mua sắm",
+                "Tiền mặt",
+                "Du lịch miễn phí",
+                "Đồng hồ thông minh",
+                "Tai nghe không dây",
+                "Máy ảnh",
+                "Balo thời trang"
+            ];
+            
+            // Sinh số nguyên ngẫu nhiên từ 0 đến chiều dài mảng - 1
+            let index = Math.floor(Math.random() * phanThuong.length);
+            
+            // Hiển thị kết quả
+            document.getElementById('ketqua').innerHTML = `Kết quả: <b>${phanThuong[index]}</b>`;
+        }
+    </script>
+</body>
+</html>

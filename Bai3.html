@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chương trình xếp học lực </h2>
+    <label for="">Nhập điểm của bạn</label>
+    <input type='number' id='điểm'>
+    <br><br>
+    <button onclick="Hocluc()">học lực</button>
+    <p id="ketqua"></p>
+    
+    <script>
+        function Hocluc() {
+            let diem = document.getElementById('điểm').value;
+            let hocluc;
+            if (diem >= 80) {
+                hocluc = "Giỏi";
+            } else if (diem >= 65) {
+                hocluc = "Khá";
+            } else if (diem >= 50) {
+                hocluc = "Trung bình";
+            } else {
+                hocluc = "Yếu";
+            }
+            document.getElementById('ketqua').innerHTML = 'Học lực của bạn là: ' + hocluc;
+        }
+    </script>
+</body>
+</html>

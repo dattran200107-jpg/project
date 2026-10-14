@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Chương trình xổ số may mắn</h2>
+    <label for="">Nhập số của bạn</label>
+    <input type='number' id='so'>
+    <br><br>
+    <button onclick="gacha()">Gacha</button>
+    <p id="ketqua"></p>
+    
+    <script>
+        function gacha() {
+            let so = document.getElementById('so').value;
+            let soMayMan = Math.floor(Math.random() * 100) + 1;
+            document.getElementById('ketqua').innerHTML = 'Số của bạn: ' + so + '<br>Số may mắn: ' + soMayMan;
+        }
+    </script>
+</body>
+</html>
