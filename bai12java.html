@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 12: findLongestWord</title>
+</head>
+<body>
+    <h2>Bài 12: Tìm chuỗi dài nhất</h2>
+    <input type="text" id="arr12" value="apple, banana, cherry, date">
+    <button onclick="run()">Chạy</button>
+    <p id="res"></p>
+
+    <script>
+        function findLongestWord(arr) {
+            if (!arr || arr.length === 0) return "";
+            let longest = arr[0].trim();
+            for (let i = 1; i < arr.length; i++) {
+                let word = arr[i].trim();
+                if (word.length > longest.length) longest = word;
+            }
+            return longest;
+        }
+
+        function run() {
+            let arr = document.getElementById('arr12').value.split(',').map(item => item.trim());
+            document.getElementById('res').innerText = "Kết quả: " + findLongestWord(arr);
+        }
+    </script>
+</body>
+</html>
