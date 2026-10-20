@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 10: sumOfSquares</title>
+</head>
+<body>
+    <h2>Bài 10: Tổng bình phương</h2>
+    <input type="text" id="arr10" value="1, 2, 3">
+    <button onclick="run()">Chạy</button>
+    <p id="res"></p>
+
+    <script>
+        function sumOfSquares(arr) {
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) {
+                total += arr[i] ** 2;
+            }
+            return total;
+        }
+
+        function run() {
+            let arr = document.getElementById('arr10').value.split(',').map(Number);
+            document.getElementById('res').innerText = "Kết quả: " + sumOfSquares(arr);
+        }
+    </script>
+</body>
+</html>
