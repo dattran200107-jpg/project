@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm số lớn nhất trong mảng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Tìm Số Lớn Nhất</h2>
+        <div class="form-group">
+            <label for="arrayInput">Nhập mảng (cách nhau bởi dấu phẩy):</label>
+            <input type="text" id="arrayInput" placeholder="Ví dụ: 1, 3, 5, 7, 9">
+        </div>
+        <button onclick="handleFindMax()">Tìm Max</button>
+        <div class="result" id="resultBox">Kết quả sẽ hiện ở đây</div>
+    </div>
+
+    <script>
+        // Hàm tìm số lớn nhất sử dụng vòng lặp for
+        function findMax(arr) {
+            if (!arr || arr.length === 0) return undefined;
+            
+            let max = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] > max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+
+        // Hàm xử lý sự kiện khi bấm nút trên giao diện
+        function handleFindMax() {
+            const inputVal = document.getElementById('arrayInput').value;
+            
+            // Chuyển chuỗi nhập vào (VD: "1, 3, 5") thành mảng số [1, 3, 5]
+            const arr = inputVal.split(',').map(item => Number(item.trim()));
+            
+            // Kiểm tra xem người dùng có nhập dữ liệu hợp lệ không
+            if (arr.some(isNaN) || inputVal.trim() === "") {
+                document.getElementById('resultBox').innerText = "Vui lòng nhập các số hợp lệ!";
+                return;
+            }
+
+            const maxVal = findMax(arr);
+            document.getElementById('resultBox').innerText = "Số lớn nhất là: " + maxVal;
+        }
+    </script>
+
+</body>
+</html>

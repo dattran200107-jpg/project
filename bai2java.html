@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2: sumOddNumbers</title>
+</head>
+<body>
+    <h2>Bài 2: Tổng các số lẻ</h2>
+    <input type="text" id="arr2" value="1, 2, 3, 4, 5">
+    <button onclick="run()">Chạy</button>
+    <p id="res"></p>
+
+    <script>
+        function sumOddNumbers(arr) {
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 !== 0) total += arr[i];
+            }
+            return total;
+        }
+
+        function run() {
+            let arr = document.getElementById('arr2').value.split(',').map(Number);
+            document.getElementById('res').innerText = "Kết quả: " + sumOddNumbers(arr);
+        }
+    </script>
+</body>
+</html>
