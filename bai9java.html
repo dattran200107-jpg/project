@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9: alternateSum</title>
+</head>
+<body>
+    <h2>Bài 9: Tổng xen kẽ</h2>
+    <input type="text" id="arr9" value="10, 5, 6, 3">
+    <button onclick="run()">Chạy</button>
+    <p id="res"></p>
+
+    <script>
+        function alternateSum(arr) {
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (i % 2 === 0) total += arr[i];
+                else total -= arr[i];
+            }
+            return total;
+        }
+
+        function run() {
+            let arr = document.getElementById('arr9').value.split(',').map(Number);
+            document.getElementById('res').innerText = "Kết quả: " + alternateSum(arr);
+        }
+    </script>
+</body>
+</html>
