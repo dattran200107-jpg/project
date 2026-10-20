@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3: findMin</title>
+</head>
+<body>
+    <h2>Bài 3: Tìm số nhỏ nhất</h2>
+    <input type="text" id="arr3" value="5, 2, 8, 1, 4">
+    <button onclick="run()">Chạy</button>
+    <p id="res"></p>
+
+    <script>
+        function findMin(arr) {
+            if (!arr || arr.length === 0) return undefined;
+            let min = arr[0];
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] < min) min = arr[i];
+            }
+            return min;
+        }
+
+        function run() {
+            let arr = document.getElementById('arr3').value.split(',').map(Number);
+            document.getElementById('res').innerText = "Kết quả: " + findMin(arr);
+        }
+    </script>
+</body>
+</html>
