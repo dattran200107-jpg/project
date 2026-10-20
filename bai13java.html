@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 13: calculateGrade</title>
+</head>
+<body>
+    <h2>Bài 13: Xếp loại học lực</h2>
+    <input type="text" id="arr13" value="95, 90, 92">
+    <button onclick="run()">Chạy</button>
+    <p id="res"></p>
+
+    <script>
+        function sumArray(arr) {
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) total += arr[i];
+            return total;
+        }
+
+        function calculateAverage(arr) {
+            if (!arr || arr.length === 0) return 0;
+            return sumArray(arr) / arr.length;
+        }
+
+        function calculateGrade(arr) {
+            let avg = calculateAverage(arr);
+            if (avg >= 90) return "A";
+            if (avg >= 80) return "B";
+            if (avg >= 70) return "C";
+            if (avg >= 60) return "D";
+            return "F";
+        }
+
+        function run() {
+            let arr = document.getElementById('arr13').value.split(',').map(Number);
+            document.getElementById('res').innerText = "Kết quả: " + calculateGrade(arr);
+        }
+    </script>
+</body>
+</html>
