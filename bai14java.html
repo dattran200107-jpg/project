@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 14: findMissingNumber</title>
+</head>
+<body>
+    <h2>Bài 14: Tìm số còn thiếu</h2>
+    <input type="text" id="arr14" value="1, 2, 4, 5, 6">
+    <input type="text" id="n14" value="6">
+    <button onclick="run()">Chạy</button>
+    <p id="res"></p>
+
+    <script>
+        function sumArray(arr) {
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) total += arr[i];
+            return total;
+        }
+
+        function findMissingNumber(arr, n) {
+            let expectedSum = (n * (n + 1)) / 2;
+            let actualSum = sumArray(arr);
+            let missing = expectedSum - actualSum;
+            return missing > 0 ? missing : 0;
+        }
+
+        function run() {
+            let arr = document.getElementById('arr14').value.split(',').map(Number);
+            let n = Number(document.getElementById('n14').value);
+            document.getElementById('res').innerText = "Kết quả: " + findMissingNumber(arr, n);
+        }
+    </script>
+</body>
+</html>
