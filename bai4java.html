@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4: countPositiveNumbers</title>
+</head>
+<body>
+    <h2>Bài 4: Đếm số lượng số dương</h2>
+    <input type="text" id="arr4" value="-1, 2, 3, -4, 5">
+    <button onclick="run()">Chạy</button>
+    <p id="res"></p>
+
+    <script>
+        function countPositiveNumbers(arr) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > 0) count++;
+            }
+            return count;
+        }
+
+        function run() {
+            let arr = document.getElementById('arr4').value.split(',').map(Number);
+            document.getElementById('res').innerText = "Kết quả: " + countPositiveNumbers(arr);
+        }
+    </script>
+</body>
+</html>
