@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 8: countGreaterThan</title>
+</head>
+<body>
+    <h2>Bài 8: Đếm phần tử lớn hơn value</h2>
+    <input type="text" id="arr8" value="1, 5, 7, 2, 3">
+    <input type="text" id="val8" value="3">
+    <button onclick="run()">Chạy</button>
+    <p id="res"></p>
+
+    <script>
+        function countGreaterThan(arr, value) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > value) count++;
+            }
+            return count;
+        }
+
+        function run() {
+            let arr = document.getElementById('arr8').value.split(',').map(Number);
+            let val = Number(document.getElementById('val8').value);
+            document.getElementById('res').innerText = "Kết quả: " + countGreaterThan(arr, val);
+        }
+    </script>
+</body>
+</html>
