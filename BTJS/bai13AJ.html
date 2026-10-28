@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array JavaScript</title>
+</head>
+<body>
+
+    <script>
+        // Bài tập 13: Xếp loại điểm trung bình
+        function calculateGrade(arr) {
+            if (arr.length === 0) return "Không có điểm";
+
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+
+            let average = sum / arr.length;
+
+            if (average >= 90) return "A";
+            if (average >= 80) return "B";
+            if (average >= 70) return "C";
+            if (average >= 60) return "D";
+
+            return "F";
+        }
+
+        document.write("<h1>Viết hàm calculateGrade</h1>");
+        document.write("<p>Kết quả xếp loại là: " + calculateGrade([90, 85, 95, 80]) + "</p>");
+    </script>
+
+</body>
+</html>

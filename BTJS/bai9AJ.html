@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array JavaScript</title>
+</head>
+<body>
+
+    <script>
+        // Bài tập 9: Tính tổng xen kẽ
+        function alternateSum(arr) {
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (i % 2 === 0) {
+                    sum += arr[i];
+                } else {
+                    sum -= arr[i];
+                }
+            }
+
+            return sum;
+        }
+
+        document.write("<h1>Viết hàm alternateSum</h1>");
+        document.write("<p>Kết quả tổng xen kẽ là: " + alternateSum([10, 5, 6, 3]) + "</p>");
+    </script>
+
+</body>
+</html>

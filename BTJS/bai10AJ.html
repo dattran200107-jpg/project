@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array JavaScript</title>
+</head>
+<body>
+
+    <script>
+        // Bài tập 10: Tính tổng bình phương
+        function sumOfSquares(arr) {
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i] * arr[i];
+            }
+
+            return sum;
+        }
+
+        document.write("<h1>Viết hàm sumOfSquares</h1>");
+        document.write("<p>Kết quả tổng bình phương là: " + sumOfSquares([1, 2, 3]) + "</p>");
+    </script>
+
+</body>
+</html>

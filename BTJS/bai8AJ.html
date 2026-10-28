@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array JavaScript</title>
+</head>
+<body>
+
+    <script>
+        // Bài tập 8: Đếm phần tử lớn hơn value
+        function countGreaterThan(arr, value) {
+            let count = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > value) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+        document.write("<h1>Viết hàm countGreaterThan</h1>");
+        document.write("<p>Kết quả là: " + countGreaterThan([1, 5, 7, 2, 3], 3) + "</p>");
+    </script>
+
+</body>
+</html>

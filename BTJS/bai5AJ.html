@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array JavaScript</title>
+</head>
+<body>
+
+    <script>
+        // Bài tập 5: Tính tổng mảng
+        function sumArray(arr) {
+            let sum = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+
+            return sum;
+        }
+
+        document.write("<h1>Viết hàm sumArray</h1>");
+        document.write("<p>Kết quả tổng mảng là: " + sumArray([1, 2, 3, 4, 5]) + "</p>");
+    </script>
+
+</body>
+</html>

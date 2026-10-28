@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array JavaScript</title>
+</head>
+<body>
+
+    <script>
+        // Bài tập 7: Kiểm tra mảng tăng dần
+        function isAscending(arr) {
+            if (arr.length < 2) return false;
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] <= arr[i - 1]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        document.write("<h1>Viết hàm isAscending</h1>");
+        document.write("<p>Kết quả kiểm tra tăng dần là: " + isAscending([1, 2, 3, 5]) + "</p>");
+    </script>
+
+</body>
+</html>

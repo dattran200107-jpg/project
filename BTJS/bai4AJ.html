@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array JavaScript</title>
+</head>
+<body>
+
+    <script>
+        // Bài tập 4: Đếm số dương
+        function countPositiveNumbers(arr) {
+            let count = 0;
+
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] > 0) {
+                    count++;
+                }
+            }
+
+            return count;
+        }
+
+        document.write("<h1>Viết hàm countPositiveNumbers</h1>");
+        document.write("<p>Kết quả số lượng số dương là: " + countPositiveNumbers([-1, 2, 3, -4, 5]) + "</p>");
+    </script>
+
+</body>
+</html>
